@@ -2,12 +2,36 @@
 Datasets con información relacionada con el coronavirus.
 
 ##### Datasets  
+- [Nuevos casos, casos activos, fallecidos y pcrs COVID-19 por fecha y zonas de salud. Castilla y León](#nuevos-casos-casos-activos-fallecidos-y-pcrs-covid-19-por-fecha-y-zonas-de-salud-castilla-y-león)  
 - [Población (2019) y superficie por municipios](#población-2019-y-superficie-por-municipios)  
 - [Relación zonas de salud y códigos ine municipios en Castilla y León](#relación-zonas-de-salud-y-códigos-ine-municipios-en-castilla-y-león)  
 - [Población (2019) de municipios de CyL por grupos quinquenales y sexo](#población-2019-de-municipios-de-cyl-por-grupos-quinquenales-y-sexo)  
 - [Desempleo por municipios (SEPE Abril 2020)](#desempleo-por-municipios-sepe-abril-2020)  
 
  
+## Nuevos casos, casos activos, fallecidos y pcrs COVID-19 por fecha y zonas de salud. Castilla y León
+```
+data_covid_cyl <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_covid_cyl_fallecidos_activos_prevalencia.csv")
+```
+
+#### Fuente
+* Casos activos: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/prevalencia-coronavirus/table/?disjunctive.provincia&sort=fecha">Prevalencia coronavirus</a>
+* Fallecidos COVID: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/tasa-mortalidad-covid-por-zonas-basicas-de-salud/table/">Tasa mortalidad covid por zonas básicas de salud</a>
+* Nuevos casos: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/tasa-enfermos-acumulados-por-areas-de-salud/table/?disjunctive.zbs_geo">Tasa de enfermos por zonas básicas de salud</a> (la columna *TOTALENFERMEDAD* se refiere al número de nuevos casos)
+
+(!) Algunas columnas no están disponibles directamente en la tabla y es necesario exportar a CSV.
+
+#### Columnas
+* **fecha**.
+* **cs**: identificador del centro de salud.
+* **nuevos_casos**: nuevos casos diarios.
+* **tarjetas_sanitarias**: tarjetas sanitarias totales adscritas a ese centro.
+* **pcr_realizados**:  nuevos tests PCR realizados.
+* **pcr_positivos**: nuevos tests PCR positivos.
+* **pcr_positivos_sintomas**: nuevos tests PCR positivos con síntomas.
+* **fallecidos**: nuevos fallecidos registrados por COVID.
+* **casos_activos**: total de casos activos.
+
 
 ## Población (2019) y superficie por municipios
 ```
