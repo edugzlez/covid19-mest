@@ -19,7 +19,7 @@ data_covid_cyl <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-m
 * Fallecidos COVID: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/tasa-mortalidad-covid-por-zonas-basicas-de-salud/table/">Tasa mortalidad covid por zonas básicas de salud</a>
 * Nuevos casos: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/tasa-enfermos-acumulados-por-areas-de-salud/table/?disjunctive.zbs_geo">Tasa de enfermos por zonas básicas de salud</a> (la columna *TOTALENFERMEDAD* se refiere al número de nuevos casos)
 
-(!) Algunas columnas no están disponibles directamente en la tabla y es necesario exportar a CSV.
+(!) Algunas columnas no están disponibles directamente en las tablas mencionadas anteriormente y es necesario exportar a CSV.
 
 #### Columnas
 * **fecha**.
