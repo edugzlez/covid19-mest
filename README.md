@@ -19,7 +19,7 @@ Es una mezcla del <a href="https://ssweb.seap.minhap.es/REL/frontend/inicio/muni
 
 ## Relación zonas de salud y códigos ine municipios en Castilla y León
 ```
-data_popext <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/zonas_salud_codigos_ine.csv")
+data_zs_ine <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/zonas_salud_codigos_ine.csv")
 ```
 
 #### Fuente
@@ -36,7 +36,7 @@ Es importante tener esta relación para asociar datos del INE, o cualquier otra 
 
 ## Población (2019) de municipios de CyL por grupos quinquenales y sexo
 ```
-data_popext <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_population_cyl.csv")
+data_popcyl <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_population_cyl.csv")
 ```
 
 #### Fuente
