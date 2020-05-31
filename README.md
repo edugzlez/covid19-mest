@@ -2,13 +2,12 @@
 Datasets con información relacionada con el coronavirus.
 
 ##### Datasets  
-- [Población (2019) y superficie por municipios](#popext)  
-- [Relación zonas de salud y códigos ine municipios en Castilla y León](#data_zs_ine)  
-- [Población (2019) de municipios de CyL por grupos quinquenales y sexo](#data_popcyl)  
-- [Desempleo por municipios (SEPE Abril 2020)](#data_unemployement)  
+- [Población (2019) y superficie por municipios](población-2019-y-superficie-por-municipios)  
+- [Relación zonas de salud y códigos ine municipios en Castilla y León](#relación-zonas-de-salud-y-códigos-ine-municipios-en-castilla-y-león)  
+- [Población (2019) de municipios de CyL por grupos quinquenales y sexo](#población-2019-de-municipios-de-cyl-por-grupos-quinquenales-y-sexo)  
+- [Desempleo por municipios (SEPE Abril 2020)](#desempleo-por-municipios-sepe-abril-2020)  
 
-
-<a name="popext"/>
+ 
 
 ## Población (2019) y superficie por municipios
 ```
@@ -26,7 +25,6 @@ Es una mezcla del <a href="https://ssweb.seap.minhap.es/REL/frontend/inicio/muni
 * **SUPERFICIE**.
 * **HABITANTES**.
 
-<a name="data_zs_ine"/>
 
 ## Relación zonas de salud y códigos ine municipios en Castilla y León
 ```
@@ -45,8 +43,6 @@ Es importante tener esta relación para asociar datos del INE, o cualquier otra 
 * **codprov**: código de provincia.
 * **codmun**.
 
-<a name="data_popcyl"/>
-
 ## Población (2019) de municipios de CyL por grupos quinquenales y sexo
 ```
 data_popcyl <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_population_cyl.csv")
@@ -63,8 +59,6 @@ Provienen de los datos del <a href="https://ine.es/dynt3/inebase/es/index.htm?pa
 * **municipio**: nombre de municipio.
 * El resto de datos se refieren a la población por edad y sexo. El propio nombre de la columna es descriptivo.
 
-
-<a name="data_unemployement"/>
 
 ## Desempleo por municipios (SEPE Abril 2020)
 ```
