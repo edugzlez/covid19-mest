@@ -14,6 +14,8 @@ Datasets con información relacionada con el coronavirus.
 data_covid_cyl <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_covid_cyl_fallecidos_activos_prevalencia.csv")
 ```
 
+El archivo *data_covid_zs_cyl.R* actualiza este dataset a partir de las fuentes.
+
 #### Fuente
 * Casos activos: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/prevalencia-coronavirus/table/?disjunctive.provincia&sort=fecha">Prevalencia coronavirus</a>
 * Fallecidos COVID: <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/tasa-mortalidad-covid-por-zonas-basicas-de-salud/table/">Tasa mortalidad covid por zonas básicas de salud</a>
