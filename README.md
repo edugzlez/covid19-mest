@@ -1,7 +1,7 @@
 # COVID19-MEST
 Datasets con información relacionada con el coronavirus.
 
-## Desempleo por municipios (SEPE Abril 2020)
+## Población (2019) y superficie por municipios
 ```
 data_popext <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_population_extension_spain.csv")
 ```
@@ -16,6 +16,40 @@ Es una mezcla del <a href="https://ssweb.seap.minhap.es/REL/frontend/inicio/muni
 * **NOMBRE**.
 * **SUPERFICIE**.
 * **HABITANTES**.
+
+## Relación zonas de salud y códigos ine municipios en Castilla y León
+```
+data_popext <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/zonas_salud_codigos_ine.csv")
+```
+
+#### Fuente
+Es una mezcla dataset anterior y los datos de las <a href="https://analisis.datosabiertos.jcyl.es/explore/dataset/tasa-enfermos-acumulados-por-areas-de-salud/table/?disjunctive.zbs_geo">zonas de salud de la Junta de Castilla y León</a>. Se han enlazado ambas tablas a partir del nombre del municipio (para compararlos se les ha realizado varias transformaciones pues no eran exactamente iguales salvo cambios menores; algunos nombres de pueblos estaban anticuados en los datos de CyL)
+
+Es importante tener esta relación para asociar datos del INE, o cualquier otra fuente, por zonas de salud.
+
+#### Columnas
+* **cs**: código del centro de salud.
+* **municipio**: nombre de un municipio que está asociado a ese centro de salud.
+* **codine**: código ine del municipio.
+* **codprov**: código de provincia.
+* **codmun**.
+
+## Población (2019) de municipios de CyL por grupos quinquenales y sexo
+```
+data_popext <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_population_cyl.csv")
+```
+
+#### Fuente
+Provienen de los datos del <a href="https://ine.es/dynt3/inebase/es/index.htm?padre=517&capsel=525">Padrón Municipal</a> que publique el INE anualmente.
+
+#### Columnas
+* **codine**: código INE.
+* **codprov**.
+* **codmun**.
+* **prov**: nombre de provincia.
+* **municipio**: nombre de municipio.
+* El resto de datos se refieren a la población por edad y sexo. El propio nombre de la columna es descriptivo.
+
 
 ## Desempleo por municipios (SEPE Abril 2020)
 ```
