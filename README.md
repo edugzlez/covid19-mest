@@ -1,13 +1,28 @@
 # COVID19-MEST
 Datasets con información relacionada con el coronavirus.
 
+## Desempleo por municipios (SEPE Abril 2020)
+```
+data_popext <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_population_extension_spain.csv")
+```
+
+#### Fuente
+Es una mezcla del <a href="https://ssweb.seap.minhap.es/REL/frontend/inicio/municipios/all/all">Registro de Entidades Locales</a> y los <a href="https://www.ine.es/daco/daco42/codmun/codmunmapa.htm">códigos ine</a> municipales. Para el municipio Tharsis de Huelva no hay código INE (desconozco el motivo).
+
+#### Columnas
+* **CODAUT**: código INE de la comunidad autónoma.
+* **CPROV**: código INE de la provincia.
+* **CMUN**: código del municipio. (la concatenación de CPROV y CMUN sería el código INE del muncipio)
+* **NOMBRE**.
+* **SUPERFICIE**.
+* **HABITANTES**.
 
 ## Desempleo por municipios (SEPE Abril 2020)
 ```
 data_unemployement <- read.csv("https://raw.githubusercontent.com/edugzlez/covid19-mest/master/data_unemployement.csv")
 ```
 #### Columnas
-* **cp**: código municipal compuesto por CPRO	CMUN según https://www.ine.es/daco/daco42/codmun/codmunmapa.htm
+* **codine**: código municipal compuesto por CPROV	CMUN según https://www.ine.es/daco/daco42/codmun/codmunmapa.htm
 * **prov**: nombre de la provincia.
 * **location**: nombre del municipio.
 * **unemployement**: desempleo total registrado.
@@ -22,3 +37,6 @@ data_unemployement <- read.csv("https://raw.githubusercontent.com/edugzlez/covid
 * **construction**: desempleados cuyo último trabajo fue en la construcción.
 * **services**: desempleados cuyo último trabajo fue en el sector servicios.
 * **previously_unemployed**: desempleados cuyo sin trabajo previo.
+
+
+
